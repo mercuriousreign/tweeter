@@ -9,7 +9,5 @@ $(document).ready(function() {
     counter.style.color = (number > 0 ? "#545149" : "red");
   })
 
-  // $('text').on('',()=>{
-    
-  // })
+
 });
