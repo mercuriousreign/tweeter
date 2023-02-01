@@ -6,6 +6,10 @@
   margin-top: 1%;
 }
 
+img{
+  object-fit: contain;
+}
+
 .user-row{
   display: flex;
   flex-direction: row;
