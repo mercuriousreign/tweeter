@@ -1,9 +1,9 @@
-.new_tweet {
-  width: 90%;
+.new-tweet {
+  width: 100%;
   margin: auto;
   font-weight: bolder;
   display: block;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 button {
@@ -38,7 +38,13 @@ textarea {
   justify-content: stretch;
   border: 20px;
   border-bottom: 5px solid rgb(0, 0, 0);
-  width: auto;
-  clear:both; 
+  /* width: auto; */
+  width: -webkit-fill-available;
+  clear: both; 
   resize: none;
+}
+
+.submit-row{
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
