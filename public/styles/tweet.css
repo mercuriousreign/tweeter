@@ -1,0 +1,31 @@
+.tweet-container{
+  display: flex;
+  border: 3px solid rgb(0, 0, 0);
+  flex-direction: column;
+  padding: 1%;
+}
+
+.user-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+.other-row{
+  display: flex;
+  border-top: 5px solid rgb(0, 0, 0);
+  flex-direction: row;
+  padding-top: 1%;
+  justify-content: space-between;
+}
+
+.tweet-intrv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.tweet-intrv :hover {
+  color: aqua;
+}

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/header.css" type="text/css" />
     <link rel="stylesheet" href="styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="styles/tweet.css" type="text/css" />
     <!-- <link rel="stylesheet" href="styles/composer-char-counter" -->
 
     <!-- External JS -->
@@ -60,12 +61,34 @@
         <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
-          <div>
+          <div class="submit-row">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-      </section>      
+      </section>
+      
+      <!---sent tweets starts here I think-->
+      <section class="tweet-container">
+        <!--flex row this-->
+        <div class="user-row">
+          <img name="avatar" src="https://i.imgur.com/nlhLi3I.png"></img>
+          <h3 name="user">Descrates</h3>
+          <h4 name="handle">@something</h4>
+        </div>
+        <p class="tweet">Je pense , donc je suis</p>
+        <!--flex row this-->
+        <div class="other-row">
+          <p class="time">somedays ago</p>
+          <div class="tweet-intrv">
+            <button type="submit"><i class="fa-solid fa-angles-down"></i></button>
+            <button type="submit"><i class="fa-solid fa-angles-down"></i></button>
+            <button type="submit"><i class="fa-solid fa-angles-down"></i></button>
+          </div>
+        </div>
+      </section>
+
+
     </main>
   </body>
 </html>
