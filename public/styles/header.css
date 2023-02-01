@@ -1,9 +1,9 @@
 header {
   display: flex;
-  height:400px;
+  height:510px;
   width: 100%;
   background-color: rgb(88, 106, 100);
-  padding-top: 0px;
+  padding-top: 141px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
