@@ -1,4 +1,37 @@
-.new_tweet{
+.new_tweet {
   width: 90%;
   margin: auto;
+  font-weight: bolder;
+  display: block;
+}
+
+button {
+  background-color: #4056A1;
+  font-family: Bungee,cursive;
+  color:#FFFFFF;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.counter {
+  display: flex;
+  justify-content: end;
+  font-weight: bolder;
+}
+
+label {
+  font-weight: bolder;
+}
+
+/* #text-tweet {
+  background-color: #f4f1ec;
+  border: 20px;
+  border-bottom: 5px solid red;
+} */
+
+textarea {
+  background-color: #f4f1ec;
+  border: 20px;
+  border-bottom: 5px solid rgb(0, 0, 0);
+  width: max-content;
 }
