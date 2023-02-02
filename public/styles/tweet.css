@@ -34,3 +34,8 @@ img{
 .tweet-intrv :hover {
   color: aqua;
 }
+
+.tweetline {
+  display: flex;
+  flex-direction: column-reverse;
+}
