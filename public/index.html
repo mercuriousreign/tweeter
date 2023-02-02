@@ -25,10 +25,12 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js<"></script>
      -->
      <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+     <script src="//unpkg.com/timeago.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="scripts/client.js"></script>
     <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
+    <!-- <script type="text/javascript" src="server/tweets.js"></script> -->
   </head>
 
   <body>
@@ -58,7 +60,7 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
+        <form action="/tweets" id="tweetsend" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="submit-row">

@@ -36,6 +36,7 @@ const data = [
 // })
 
 const createTweetElement  = function(tweet) {
+  //let date = timeago.format(tweet.created_at);
   let date = new Date(tweet.created_at);
 
   const tweetTemplate = `<section class="tweet-container">
@@ -68,6 +69,45 @@ const renderTweets = function(tweets) {
   }
 }
 
+const tweetsubmit = document.getElementById('tweetsend')
+
+
+
+
 $( document ).ready(()=>{
-  renderTweets(data);
+  //renderTweets(data);
+  //$form.on("submit", (event) => {
+  $('#tweetsend').submit(function(event) {
+    event.preventDefault();
+    const tweetsubmit = document.getElementById('tweetsend')
+    console.log("after line 74",$( this ).serialize());
+    
+    $.ajax({
+      url:"/tweets",
+      method:"POST",
+      data : $( this ).serialize(), 
+      success : (ev) => {
+        console.log("a string");
+      }
+  })
+
 })
+
+  // $('#tweetsend').on("submit", function(event){
+  //   event.preventDefault();
+  //   console.log("something is ",$( this ).serialize());
+
+  //   $.ajax({
+  //         url:"/tweets",
+  //         method:"POST",
+  //         data : $( this ).serialize(), 
+  //         success : (ev) => {
+  //           console.log("a string");
+  //         }
+
+  // })
+    // $.ajax(console.log($(this).serialize()));
+    
+    // $.ajax($(this).serialize());
+  
+  })
