@@ -9,10 +9,12 @@
 const tweetsubmit = document.getElementById('tweetsend')
 
 $( document ).ready(()=>{
+  const area = document.getElementById("tweet-text");
 
   const createTweetElement  = function(tweet) {
     //let date = timeago.format(tweet.created_at);
     //let date = new Date(tweet.created_at);
+    let date = timeago.format(tweet.created_at);
   
     const tweetTemplate = `<section class="tweet-container">
       <!--flex row this-->
@@ -33,12 +35,13 @@ $( document ).ready(()=>{
       </div>
     </section>`
   
-    $('.tweetline').append(tweetTemplate);
+    $('.tweetline').append(tweetTemplate)
     //$(document).append(tweetTemplate);
   
   }
   
   const renderTweets = function(tweets) {
+    area.value = "";
     for (const tweet of tweets) {
       createTweetElement(tweet)
     }
@@ -60,8 +63,16 @@ $( document ).ready(()=>{
   //$form.on("submit", (event) => {
   $('#tweetsend').submit(function(event) {
     event.preventDefault();
+    if (!area.value) {
+      return alert("Please input a message to tweet");
+    }
+    if (area.textLength > 140) {
+      return alert("Message must be under 140 characters to sent");
+    }
     const tweetsubmit = document.getElementById('tweetsend')
     console.log("after line 74",$( this ).serialize());
+    
+    
     
     $.ajax({
       url:"/tweets",
