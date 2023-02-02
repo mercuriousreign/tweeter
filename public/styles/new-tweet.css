@@ -48,3 +48,8 @@ textarea {
   padding-top: 3%;
   padding-bottom: 3%;
 }
+
+.tweetline {
+  display: flex;
+  flex-direction: column-reverse;
+}

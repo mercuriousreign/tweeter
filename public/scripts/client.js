@@ -8,8 +8,13 @@
 
 const tweetsubmit = document.getElementById('tweetsend')
 
+
 $( document ).ready(()=>{
   const area = document.getElementById("tweet-text");
+  const errorlog = document.getElementById('error-log');
+  $(errorlog).slideToggle();
+
+
 
   const createTweetElement  = function(tweet) {
     //let date = timeago.format(tweet.created_at);
@@ -64,10 +69,21 @@ $( document ).ready(()=>{
   $('#tweetsend').submit(function(event) {
     event.preventDefault();
     if (!area.value) {
-      return alert("Please input a message to tweet");
+      //return alert();
+      //$(errorlog).slideDown();
+      errorlog.innerHTML= "Please input a message to tweet";
+      return $(errorlog).slideDown();
     }
     if (area.textLength > 140) {
-      return alert("Message must be under 140 characters to sent");
+      errorlog.innerHTML= "Message must be under 140 character to post";
+      return $(errorlog).slideDown(); 
+    }
+
+
+    if(errorlog.innerHTML){
+      errorlog.innerHTML="";
+      $(errorlog).slideUp(); 
+
     }
     const tweetsubmit = document.getElementById('tweetsend')
     console.log("after line 74",$( this ).serialize());
