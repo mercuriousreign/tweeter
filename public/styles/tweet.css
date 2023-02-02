@@ -40,6 +40,15 @@ img {
   flex-direction: column-reverse;
 }
 
+
+@media only screen and (min-width: 1024px) {
+  .tweetline {
+    padding-left: 2%;
+  }
+}
+
+
+
 #error-log {
   display: flex;
   justify-content: center;

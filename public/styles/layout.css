@@ -22,15 +22,28 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-flow: row;
+  }
+  .container {
+    padding: 2%;
+    margin-top: 150px;
+  }
+}
+
+
 main {
   background-color: #f4f1ec;
   width: 90%;
   margin: auto;
 }
 
-/* nav {
+nav {
   font-family: 'Bungee', cursive;
-} */
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
