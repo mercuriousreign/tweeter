@@ -4,9 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
 
-const tweetsubmit = document.getElementById('tweetsend')
 
 
 $( document ).ready(()=>{
@@ -14,11 +12,15 @@ $( document ).ready(()=>{
   const errorlog = document.getElementById('error-log');
   $(errorlog).slideToggle();
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
 
 
   const createTweetElement  = function(tweet) {
-    //let date = timeago.format(tweet.created_at);
-    //let date = new Date(tweet.created_at);
     let date = timeago.format(tweet.created_at);
   
     const tweetTemplate = `<section class="tweet-container">
@@ -27,7 +29,7 @@ $( document ).ready(()=>{
         <h3 name="user">${tweet.user.name}</h3>
         <h4 name="handle">${tweet.user.handle}</h4>
       </div>
-      <p class="tweet">${tweet.content.text.text}</p>
+      <p class="tweet">${escape(tweet.content.text)}</p>
       <div class="other-row">
         <p class="time">${date}</p>
         <div class="tweet-intrv">
@@ -39,7 +41,7 @@ $( document ).ready(()=>{
     </section>`
   
     $('.tweetline').append(tweetTemplate)
-    //$(document).append(tweetTemplate);
+  
   
   }
   
@@ -62,13 +64,10 @@ $( document ).ready(()=>{
   })
 
   }
-  //renderTweets(data);
-  //$form.on("submit", (event) => {
+
   $('#tweetsend').submit(function(event) {
     event.preventDefault();
     if (!area.value) {
-      //return alert();
-      //$(errorlog).slideDown();
       errorlog.innerHTML= "Please input a message to tweet";
       return $(errorlog).slideDown();
     }
@@ -83,17 +82,12 @@ $( document ).ready(()=>{
       $(errorlog).slideUp(); 
 
     }
-    const tweetsubmit = document.getElementById('tweetsend')
-    console.log("after line 74",$( this ).serialize());
-    
-    
     
     $.ajax({
       url:"/tweets",
       method:"POST",
       data : $( this ).serialize(), 
       success : (ev) => {
-        console.log("a string");
         loadTweets();
       }
   })
@@ -101,28 +95,4 @@ $( document ).ready(()=>{
 })
 
 loadTweets();
-
-
-
-  // $('#tweetsend').on("submit", function(event){
-  //   event.preventDefault();
-  //   console.log("something is ",$( this ).serialize());
-
-  //   $.ajax({
-  //         url:"/tweets",
-  //         method:"POST",
-  //         data : $( this ).serialize(), 
-  //         success : (ev) => {
-  //           console.log("a string");
-  //         }
-
-  // })
-    // $.ajax(console.log($(this).serialize()));
-    
-    // $.ajax($(this).serialize());
-
-
-
-
-  
   })
