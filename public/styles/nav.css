@@ -3,14 +3,14 @@ nav {
   display: inline-flex;
   width: -webkit-fill-available;
   background-color: #4056A1;
-  color:#FFFFFF;
+  color: #FFFFFF;
   justify-content: space-between;
   align-items: center;
   position: fixed;
 }
 
-span{
-  font-family: Bungee,cursive;
+span {
+  font-family: Bungee, cursive;
   padding-left: 1.5em;
   padding-right: 1.5em;
 }

@@ -1,6 +1,6 @@
 header {
   display: flex;
-  height:510px;
+  height: 510px;
   width: 100%;
   background-color: rgb(88, 106, 100);
   color: cornsilk;
@@ -13,7 +13,7 @@ header {
 
 /* Mobile first to Desktop approach to responsibe design */
 @media only screen and (min-width: 1024px) {
-  header{
+  header {
     margin-top: 21em;
   }
 }

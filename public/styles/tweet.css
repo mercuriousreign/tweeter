@@ -40,7 +40,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  
+
 }
 
 .tweet-intrv :hover {
