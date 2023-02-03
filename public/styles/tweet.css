@@ -6,6 +6,10 @@
   margin-top: 1%;
 }
 
+.tweet-container:hover {
+  box-shadow: 10px 5px 5px black;
+}
+
 img {
   object-fit: contain;
 }
@@ -29,6 +33,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  
 }
 
 .tweet-intrv :hover {
@@ -39,14 +44,6 @@ img {
   display: flex;
   flex-direction: column-reverse;
 }
-
-
-@media only screen and (min-width: 1024px) {
-  .tweetline {
-    padding-left: 2%;
-  }
-}
-
 
 
 #error-log {

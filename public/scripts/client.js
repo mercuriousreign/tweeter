@@ -31,9 +31,9 @@ $( document ).ready(()=>{
       <div class="other-row">
         <p class="time">${date}</p>
         <div class="tweet-intrv">
-          <button type="submit"><i class="fa-solid fa-angles-down"></i></button>
-          <button type="submit"><i class="fa-solid fa-angles-down"></i></button>
-          <button type="submit"><i class="fa-solid fa-angles-down"></i></button>
+          <button type="submit"><i class="fa-solid fa-flag"></i></button>
+          <button type="submit"><i class="fa-solid fa-retweet"></i></button>
+          <button type="submit"><i class="fa-solid fa-heart"></i></button>
         </div>
       </div>
     </section>`

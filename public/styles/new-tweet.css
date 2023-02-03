@@ -7,11 +7,16 @@
 }
 
 button {
-  background-color: #4056A1;
   font-family: Bungee,cursive;
-  color:#FFFFFF;
+  color:#4056A1;
   text-align: center;
   justify-content: space-evenly;
+}
+
+
+#submit-tweet{
+  background-color: #4056A1;
+  color:#FFFFFF;
 }
 
 .counter {
@@ -25,12 +30,6 @@ label {
   margin-bottom: 1em;
 }
 
-/* #text-tweet {
-  background-color: #f4f1ec;
-  border: 20px;
-  border-bottom: 5px solid rgb(0, 0, 0);
-  clear:both; 
-} */
 
 textarea {
   background-color: #f4f1ec;
@@ -38,7 +37,6 @@ textarea {
   justify-content: stretch;
   border: 20px;
   border-bottom: 5px solid rgb(0, 0, 0);
-  /* width: auto; */
   width: -webkit-fill-available;
   clear: both; 
   resize: none;
@@ -49,7 +47,3 @@ textarea {
   padding-bottom: 3%;
 }
 
-.tweetline {
-  display: flex;
-  flex-direction: column-reverse;
-}
