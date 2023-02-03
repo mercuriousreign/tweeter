@@ -22,14 +22,12 @@ $( document ).ready(()=>{
     let date = timeago.format(tweet.created_at);
   
     const tweetTemplate = `<section class="tweet-container">
-      <!--flex row this-->
       <div class="user-row">
         <img name="avatar" src="${tweet.user.avatars}"></img>
         <h3 name="user">${tweet.user.name}</h3>
         <h4 name="handle">${tweet.user.handle}</h4>
       </div>
-      <p class="tweet">${tweet.content.text}</p>
-      <!--flex row this-->
+      <p class="tweet">${tweet.content.text.text}</p>
       <div class="other-row">
         <p class="time">${date}</p>
         <div class="tweet-intrv">
