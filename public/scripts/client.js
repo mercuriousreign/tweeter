@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $( document ).ready(()=>{
   const area = document.getElementById("tweet-text");
   const errorlog = document.getElementById('error-log');
@@ -21,8 +22,10 @@ $( document ).ready(()=>{
     let date = timeago.format(tweet.created_at);
     const tweetTemplate = `<section class="tweet-container">
       <div class="user-row">
+      <div class="img-name">
         <img name="avatar" src="${tweet.user.avatars}"></img>
         <h3 name="user">${tweet.user.name}</h3>
+      </div>
         <h4 name="handle">${tweet.user.handle}</h4>
       </div>
       <p class="tweet">${escape(tweet.content.text)}</p>
