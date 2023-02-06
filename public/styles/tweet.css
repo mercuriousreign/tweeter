@@ -47,9 +47,9 @@ img {
   color: aqua;
 }
 
-.tweetline {
+.tweetlist {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 

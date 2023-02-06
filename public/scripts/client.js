@@ -40,15 +40,16 @@ $(document).ready(()=>{
       </div>
     </section>`;
   
-    $('.tweetline').append(tweetTemplate);
+    //$('.tweetline').append(tweetTemplate);
+    return tweetTemplate
   };
   
   /**Add whole list of tweet to be showcased  */
-  const renderTweets = function(tweets) {
+  const renderTweets = function(listpoint,tweets) {
     
     //counter.textContent = 140;
     for (const tweet of tweets) {
-      createTweetElement(tweet);
+      $('.tweetlist').prepend(createTweetElement(tweet));
     }
   };
   
@@ -60,8 +61,8 @@ $(document).ready(()=>{
       method: 'GET',
       dataType: 'JSON'
     }).then(function(response) {
-      $('.tweetline').empty();
-      renderTweets(response);
+      $('.tweetlist').empty();
+      renderTweets('.tweetlist',response);
     });
 
   };
