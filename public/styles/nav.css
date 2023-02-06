@@ -2,7 +2,7 @@ nav {
   height: 120px;
   display: inline-flex;
   width: -webkit-fill-available;
-  background-color: #4056A1;
+  background-color:rgb(88, 106, 100);
   color: #FFFFFF;
   justify-content: space-between;
   align-items: center;
@@ -20,4 +20,25 @@ span {
   justify-content: space-evenly;
   flex-direction: column;
   padding-right: 1.5em;
+}
+
+.fa-angles-down{
+  color :red;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+@keyframes bounce{
+  0%{bottom: 0px;}
+  50%{bottom: 13px;}
+  100%{bottom: 0px;}
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    
+    background-color: #4056A1;
+  }
 }

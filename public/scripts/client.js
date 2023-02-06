@@ -8,7 +8,17 @@ $(document).ready(()=>{
   const area = document.getElementById("tweet-text");
   const errorlog = document.getElementById('error-log');
   const counter = document.getElementsByName("counter")[0];
+  const writingForm = document.getElementsByClassName('fa-angles-down')[0];
   $(errorlog).slideToggle();
+  $('.new-tweet').slideToggle();
+
+  /**Animation trigger for tweeting space */
+  writingForm.addEventListener("mouseup",function(){
+    $('.new-tweet').slideToggle();
+  })
+
+
+
 
   /**Method to use to negate cross site scripting */
   const escape = function(str) {
